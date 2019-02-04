@@ -39,7 +39,7 @@
                     <a-entity   cursor="fuse:true; fuseTimeout:500;"
                                 position="0 0 -1"
                                 geometry="primitive:ring; radiusInner:0.02; radiusOuter:0.03;"
-                                material="shader:flat; color:black;" >
+                                material="shader:flat; color:green;" >
                     </a-entity>
                 </a-entity>
 
@@ -52,7 +52,7 @@
                 <a-entity light="type: ambient; intensity: 1.0; color:#bbb;"></a-entity>
             
                 <!-- our helmet model from : https://github.com/KhronosGroup/glTF-Sample-Models -->
-                <a-obj-model create-tree-component src="#sign-obj" id="#signmap"position="-1 0.6 -4" scale="0.02 0.02 0.02" shadow="cast:true; receive:true;" spherical-env-map="src:#skymap;"></a-obj-model>
+                <a-obj-model create-tree-component src="#sign-obj" position="-1 0.6 -4" scale="0.02 0.02 0.02" shadow="cast:true; receive:true;" spherical-env-map="src:#skymap;"></a-obj-model>
                     
                 <!-- plane so we can see shadows -->
                 <a-entity id="plane" geometry="primitive:plane; width:4; height:4;" position="0 0 -4" rotation="-90 0 0" 
@@ -62,6 +62,7 @@
                 <a-entity id="sky"
                     geometry="primitive:sphere; radius:500;"
                     material="shader:flat; src:#skymap; side:back; height:2048; width:2048"></a-entity>
+                    
         </a-scene>
     </body>
 </html>

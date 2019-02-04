@@ -27,7 +27,7 @@ AFRAME.registerComponent('create-tree-component', {
         treeElem.setAttribute('position', {x:0.5, y:0, z:-4});
         treeElem.setAttribute('scale', {x:0.01, y:0.01, z:0.01});
         treeElem.setAttribute('rotation', {x:0, y:90, z:0});
-        
+       
         let scene = document.querySelector('a-scene');
         scene.appendChild(treeElem);
     }
