@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Hello, WebVR! - A-Frame</title>
+        <title>Plant a tree, cut a tree</title>
         <meta name="Assignment 2" content="create a tree!">
         <script src="/js/aframe.min.js"></script>
         <script src="/js/spherical-env-map.js"></script>
@@ -19,7 +19,7 @@
                     <img crossorigin="anonymous" id="skymap" src="/assets/textures/CloudySky.jpg">
                     <img crossorigin="anonymous" id="signmap" src="/assets/textures/sign_texture.png">
                     <a-asset-item crossorigin="anonymous" id="sign-obj" src="/assets/models/sign.obj">
-                    <a-asset-item crossorigin="anonymous" id="tree-obj" src="/assets/models/tree.obj">
+                    <a-asset-item crossorigin="anonymous" id="tree-obj" src="/assets/models/Tree.obj">
 
                     <!-- use this method if you are having problems with sound playing -->
                     <!-- sounds from "SuperSays" project : https://github.com/supermedium/supersays/tree/master/src/assets -->
@@ -52,11 +52,11 @@
                 <a-entity light="type: ambient; intensity: 1.0; color:#bbb;"></a-entity>
             
                 <!-- our helmet model from : https://github.com/KhronosGroup/glTF-Sample-Models -->
-                <a-object-model create-tree-component src="#sign-obj" position="-2 0.6 -4" scale="1 1 1" shadow="cast:true; receive:true;" spherical-env-map="src:#skymap;"></a-gltf-model>
+                <a-obj-model create-tree-component src="#sign-obj" id="#signmap"position="-1 0.6 -4" scale="0.02 0.02 0.02" shadow="cast:true; receive:true;" spherical-env-map="src:#skymap;"></a-obj-model>
                     
                 <!-- plane so we can see shadows -->
                 <a-entity id="plane" geometry="primitive:plane; width:4; height:4;" position="0 0 -4" rotation="-90 0 0" 
-                    shadow="receive:true;" material="color:#7BC8A4; sphericalEnvMap:#skymap; roughness:0.5; metalness:0.0;"></a-entity>
+                    shadow="receive:true;" material="color:#D2B48C; sphericalEnvMap:#skymap; roughness:0.5; metalness:0.0;"></a-entity>
             
                 <!-- manual method of creating "sky sphere" -->
                 <a-entity id="sky"

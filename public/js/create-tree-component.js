@@ -21,10 +21,12 @@ AFRAME.registerComponent('create-tree-component', {
         //see here: https://www.html5rocks.com/en/tutorials/speed/static-mem-pools/ 
         //see here: https://aframe.io/docs/0.8.0/components/pool.html
         let treeElem = document.createElement('a-entity');
-        treeElem.setAttribute('obj-model', {obj:'/assets/models/tree.obj'});
-        treeElem.setAttribute('material', {src:'/assets/textures/tree_texture.png'});
+        treeElem.setAttribute('obj-model', {obj:'/assets/models/Tree.obj'});
+        treeElem.setAttribute('material', {src:'/assets/textures/Tree_texture.png'});
         treeElem.setAttribute('remove-component', {}); 
-        treeElem.setAttribute('position', {x:2, y:0, z:-4});
+        treeElem.setAttribute('position', {x:0.5, y:0, z:-4});
+        treeElem.setAttribute('scale', {x:0.01, y:0.01, z:0.01});
+        treeElem.setAttribute('rotation', {x:0, y:90, z:0});
         
         let scene = document.querySelector('a-scene');
         scene.appendChild(treeElem);
