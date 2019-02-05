@@ -6,7 +6,7 @@ AFRAME.registerComponent('remove-component', {
         Context_AF.soundElem = document.querySelector('#deleteSound');
 
         Context_AF.el.addEventListener('click', function(event) {
-            console.log("click");
+            console.log("deleted");
             //object clicked - lets create a tree!
             Context_AF.deleteMyself();
 

@@ -5,7 +5,7 @@ AFRAME.registerComponent('create-tree-component', {
         Context_AF.soundElem = document.querySelector('#createSound');
 
         Context_AF.el.addEventListener('click', function(event) {
-            console.log("click");
+            console.log("tree");
             //object clicked - lets create a cow!
             Context_AF.createTree();
 

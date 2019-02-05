@@ -34,31 +34,26 @@
                 <!-- traditional method of creating a camera and cursor component for selection. select with reticle. -->
                 <!-- Also added in controls for desktop mouse/kb -->
                 <a-entity position="0 2 0 " camera look-controls wasd-controls>
-                    <!-- if you add rayOrigin:mouse to teh cursor properties selection happens where you click -->
-                    <!-- <a-entity   cursor="fuse:true; fuseTimeout:500; rayOrigin:mouse;" -->
-                    <a-entity   cursor="fuse:true; fuseTimeout:500;"
+                  
+                    <a-entity   cursor="fuse:true; fuseTimeout:500; rayOrigin:mouse;" ></a-entity>
+                    <!-- <a-entity   cursor="fuse:true; fuseTimeout:500;"
                                 position="0 0 -1"
                                 geometry="primitive:ring; radiusInner:0.02; radiusOuter:0.03;"
                                 material="shader:flat; color:green;" >
-                    </a-entity>
+                    </a-entity> -->
                 </a-entity>
 
-                <!-- sound entities we will query and play in components -->
                 <a-entity id="createSound" sound="src:#create-sound"></a-entity>
                 <a-entity id="deleteSound" sound="src:#delete-sound"></a-entity>
-            
-                <!-- default lighting added in manually -->
+   
                 <a-entity light="type:directional; castShadow:true; intensity:0.6; shadowBias:-0.000001; shadowMapWidth:1024; shadowMapHeight:1024;" position="-0.5 1 1"></a-entity>
                 <a-entity light="type: ambient; intensity: 1.0; color:#bbb;"></a-entity>
             
-                <!-- our helmet model from : https://github.com/KhronosGroup/glTF-Sample-Models -->
-                <a-obj-model create-tree-component src="#sign-obj" position="-1 0.6 -4" scale="0.02 0.02 0.02" shadow="cast:true; receive:true;" spherical-env-map="src:#skymap;"></a-obj-model>
+                <a-obj-model create-tree-component src="#sign-obj" position="-1 0 -4" scale="0.02 0.02 0.02" shadow="cast:true; receive:true;" spherical-env-map="src:#skymap;"></a-obj-model>
                     
-                <!-- plane so we can see shadows -->
                 <a-entity id="plane" geometry="primitive:plane; width:4; height:4;" position="0 0 -4" rotation="-90 0 0" 
                     shadow="receive:true;" material="color:#D2B48C; sphericalEnvMap:#skymap; roughness:0.5; metalness:0.0;"></a-entity>
-            
-                <!-- manual method of creating "sky sphere" -->
+        
                 <a-entity id="sky"
                     geometry="primitive:sphere; radius:500;"
                     material="shader:flat; src:#skymap; side:back; height:2048; width:2048"></a-entity>
