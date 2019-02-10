@@ -6,13 +6,11 @@ AFRAME.registerComponent('create-tree-component', {
 
         Context_AF.el.addEventListener('click', function(event) {
             console.log("tree");
-            //object clicked - lets create a cow!
+
             Context_AF.createTree();
 
-            Context_AF.soundElem.components['sound'].stopSound(); //stop first so we aren't trying to play more than once at same time
+            Context_AF.soundElem.components['sound'].stopSound(); 
             Context_AF.soundElem.components['sound'].playSound();
-
-
 
         });
 
@@ -23,6 +21,7 @@ AFRAME.registerComponent('create-tree-component', {
         const Context_AF = this;
         let treeElem = document.createElement('a-entity');
 
+        //create trees at random places on the plane
         function generateNumber() {
             return(Math.floor(Math.random() *4) ) 
         }
@@ -30,7 +29,6 @@ AFRAME.registerComponent('create-tree-component', {
         function generatePositionVector(){
             return(generateNumber() + " " + 0 + " " + generateNumber() );
         }
-    
 
         treeElem.setAttribute('obj-model', {obj:'/assets/models/Tree.obj'});
         treeElem.setAttribute('material', {src:'/assets/textures/Tree_texture.png'});
